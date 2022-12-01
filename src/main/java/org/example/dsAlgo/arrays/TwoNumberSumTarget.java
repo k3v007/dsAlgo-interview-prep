@@ -13,7 +13,7 @@ public class TwoNumberSumTarget {
             } else {
                 int diff = target - nums[i];
                 if (lookup.containsKey(diff)) {
-                    return new int[]{lookup.get(diff), i};
+                    return new int[] { lookup.get(diff), i };
                 }
                 lookup.put(nums[i], i);
             }

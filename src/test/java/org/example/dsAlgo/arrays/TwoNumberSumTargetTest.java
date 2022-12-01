@@ -19,7 +19,7 @@ class TwoNumberSumTargetTest {
 
     @ParameterizedTest
     @MethodSource("provideParameters")
-    void test_twoSum2() {
+    void test_twoSum() {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
         int[] expected = {0, 1};
