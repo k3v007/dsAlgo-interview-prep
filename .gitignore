@@ -25,5 +25,8 @@ hs_err_pid*
 # Target Folder
 target
 
+# VS Code
+.vscode
+
 .DS_Store
 .idea
