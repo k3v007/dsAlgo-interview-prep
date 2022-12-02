@@ -1,6 +1,7 @@
 package org.example.dsAlgo.binaryTree;
 
 import org.assertj.core.api.Assertions;
+import org.example.dsAlgo.util.BinaryTreeUtil;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -20,21 +21,11 @@ class InvertBinaryTreeTest {
     @ParameterizedTest
     @MethodSource("provideParameters")
     void test_invertTree(int[] root, int[] output) {
-        TreeNode treeNode = createTreeNode(0, root);
-        TreeNode expected = createTreeNode(0, output);
+        TreeNode treeNode = BinaryTreeUtil.createTreeNode(0, root);
+        TreeNode expected = BinaryTreeUtil.createTreeNode(0, output);
 
         TreeNode actual = new InvertBinaryTree().invertTree(treeNode);
 
         Assertions.assertThat(actual).usingRecursiveComparison().isEqualTo(expected);
-    }
-
-    private TreeNode createTreeNode(int i, int[] root) {
-        TreeNode treeNode = null;
-        if (i < root.length) {
-            treeNode = new TreeNode(root[i]);
-            treeNode.left = createTreeNode(2 * i + 1, root);
-            treeNode.right = createTreeNode(2 * i + 2, root);
-        }
-        return treeNode;
     }
 }
