@@ -7,6 +7,10 @@ import java.util.Map;
 
 import javafx.util.Pair;
 
+/**
+ * @see <a href="https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/"a>653. Two Sum IV - Input is a BST</a>
+ * @See https://leetcode.com/discuss/study-guide/2044134/javarecursion-when-using-primitive-data-types-and-objects-beginners-guide
+ */
 public class TwoNodeSumTargetBST {
 
     private boolean isFound = false;
