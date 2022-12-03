@@ -28,4 +28,13 @@ public class LowestCommonAncestorBTTest {
         Assertions.assertThat(actual.val).isEqualTo(expected);
     }
 
+    @ParameterizedTest(name = "Input: tree={0}, p={1}, q={2} :: Output: {3}")
+    @MethodSource("provideParameters")
+    void test_findLCA(List<Integer> tree, int p, int q, int expected) {
+        TreeNode treeNode = BinaryTreeUtil.createTreeNode(0, tree);
+        TreeNode actual = new LowestCommonAncestorBT().findLCA(treeNode, new TreeNode(p), new TreeNode(q));
+
+        Assertions.assertThat(actual.val).isEqualTo(expected);
+    }
+
 }
